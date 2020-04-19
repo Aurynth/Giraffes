@@ -36,11 +36,11 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + Movement * moveSpeed * Time.fixedDeltaTime);
         if(rb.position.x <= 150 || rb.position.x >= 580)
         {
-            Movement.x * (-1);
+            Movement.x *= (-1);
         }
         if(rb.position.y <= 30 || rb.position.y >= 350)
         {
-            Movement.y * (-1);
+            Movement.y *= (-1);
         }
     }
 }

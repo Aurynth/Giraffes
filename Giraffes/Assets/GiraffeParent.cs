@@ -32,8 +32,6 @@ public class GiraffeParent : MonoBehaviour
         LongNeckness = PlayerPrefs.GetInt("AverageLongNeckness") + offsets[4];
         Hotness = PlayerPrefs.GetInt("AverageHotness") + offsets[5];
 
-        Debug.Log(PlayerPrefs.GetInt("MalePopulation"));
-
         if(PlayerPrefs.GetInt("MalePopulation") > 0)
         {
             male = true;

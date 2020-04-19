@@ -7,12 +7,12 @@ public class newMatch : MonoBehaviour
 {
     public StatsCard Male;
     public StatsCard Female;
-
+    
     public void Match()
     {
-        if (Male != null && Female != null)
+        if (Male.myGiraffe != null && Female.myGiraffe != null)
         {
-            if (GetCompatibility() > 85)
+            if (GetCompatibility() > 95)
             {
                 BabyGiraffe Baby = new BabyGiraffe();
                 Baby.newBaby(Female.myGiraffe, Male.myGiraffe);
@@ -21,6 +21,7 @@ public class newMatch : MonoBehaviour
                     print("You found a match - Next Generation!");
                     NextLevel(Baby);
                     //respawn giraffes
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
                 else
                 {
@@ -31,6 +32,10 @@ public class newMatch : MonoBehaviour
             {
                 print("No Match!");
             }
+        }
+        else
+        {
+            print("You must select a male and female giraffe");
         }
     }
 
