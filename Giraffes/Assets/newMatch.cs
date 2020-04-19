@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.SceneManagement;
 
 public class newMatch : MonoBehaviour
 {
@@ -10,14 +10,27 @@ public class newMatch : MonoBehaviour
 
     public void Match()
     {
-        if(GetCompatibility() > 75)
+        if (Male != null && Female != null)
         {
-            BabyGiraffe Baby = new BabyGiraffe();
-            //Baby.newBaby(Female.myGiraffe, Male.MyGiraffe);
-        }
-        else
-        {
-            print("No Match!");
+            if (GetCompatibility() > 85)
+            {
+                BabyGiraffe Baby = new BabyGiraffe();
+                Baby.newBaby(Female.myGiraffe, Male.myGiraffe);
+                if (PlayerPrefs.GetInt("Generation") <= 10)
+                {
+                    print("You found a match - Next Generation!");
+                    NextLevel(Baby);
+                    //respawn giraffes
+                }
+                else
+                {
+                    //Win or Lose Condition tested
+                }
+            }
+            else
+            {
+                print("No Match!");
+            }
         }
     }
 
@@ -28,5 +41,28 @@ public class newMatch : MonoBehaviour
         float percentage = minScore / maxScore;
 
         return (percentage * 100);
+    }
+
+    public void NextLevel(BabyGiraffe Baby)
+    {
+        int date = PlayerPrefs.GetInt("Date") + 10;
+        int generation = PlayerPrefs.GetInt("Generation") + 1;
+
+        int[] offsets = new int[6];
+
+        for (int i = 0; i < offsets.Length; i++)
+        {
+            offsets[i] = Random.Range(-10, 10);
+        }
+
+        PlayerPrefs.SetInt("Date", date);
+        PlayerPrefs.SetInt("Generation", generation);
+        PlayerPrefs.SetInt("MalePopulation", 5);
+        PlayerPrefs.SetInt("AverageBeefiness", Baby.Beefiness + offsets[0]);
+        PlayerPrefs.SetInt("AverageSpeediness", Baby.Speediness + offsets[1]);
+        PlayerPrefs.SetInt("AverageChonk", Baby.Chonk + offsets[2]);
+        PlayerPrefs.SetInt("AverageBrainliness", Baby.Brainliness + offsets[3]);
+        PlayerPrefs.SetInt("AverageLongNeckness", Baby.LongNeckness + offsets[4]);
+        PlayerPrefs.SetInt("AverageHotness", Baby.Hotness + offsets[5]);
     }
 }

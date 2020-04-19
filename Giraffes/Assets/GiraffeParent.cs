@@ -15,12 +15,10 @@ public class GiraffeParent : MonoBehaviour
     public int LongNeckness;
     public int Hotness;
 
-    Random[] random;
-
     // Start is called before the first frame update
     void Start()
     {
-        int[] offsets = new int[7];
+        int[] offsets = new int[6];
 
         for (int i = 0; i < offsets.Length; i++)
         {
@@ -34,7 +32,9 @@ public class GiraffeParent : MonoBehaviour
         LongNeckness = PlayerPrefs.GetInt("AverageLongNeckness") + offsets[4];
         Hotness = PlayerPrefs.GetInt("AverageHotness") + offsets[5];
 
-        if(offsets[6] > 0 && PlayerPrefs.GetInt("MalePopulation") > 0)
+        Debug.Log(PlayerPrefs.GetInt("MalePopulation"));
+
+        if(PlayerPrefs.GetInt("MalePopulation") > 0)
         {
             male = true;
             int newMalePop = PlayerPrefs.GetInt("MalePopulation") - 1;
@@ -58,8 +58,11 @@ public class GiraffeParent : MonoBehaviour
             {
                 if (hit.transform)
                 {
-                    PopulateStats();
-                    PrintName(hit.transform.gameObject);
+                    GiraffeParent gp;
+                    if(gp = hit.transform.GetComponent<GiraffeParent>())
+                    {
+                        PopulateStats(gp);
+                    }
                 }
             }
         }
@@ -70,15 +73,15 @@ public class GiraffeParent : MonoBehaviour
         print(go.name);
     }
 
-    public void PopulateStats()
+    public void PopulateStats(GiraffeParent me)
     {
-        if(male)
+        if(me.male)
         {
-            MaleCard.SetStats(this);
+            MaleCard.SetStats(me);
         }
         else
         {
-            FemaleCard.SetStats(this);
+            FemaleCard.SetStats(me);
         }
     }
 }

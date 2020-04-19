@@ -11,7 +11,7 @@ public class StatsCard : MonoBehaviour
     public StatsBar LongNeckness;
     public StatsBar Hotness;
     public float TotalScore;
-    //public GiraffeParent myGiraffe;
+    public GiraffeParent myGiraffe;
 
     public void SetStats(GiraffeParent giraffe)
     {
@@ -22,7 +22,8 @@ public class StatsCard : MonoBehaviour
         LongNeckness.SetStat(giraffe.LongNeckness);
         Hotness.SetStat(giraffe.Hotness);
         TotalScore = Beefiness.Stat.value + Speediness.Stat.value + Chonk.Stat.value + Brainliness.Stat.value + LongNeckness.Stat.value + Hotness.Stat.value;
-        //myGiraffe = giraffe;
+        myGiraffe = null;
+        myGiraffe = giraffe;
     }
 
 }
