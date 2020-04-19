@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class newMatch : MonoBehaviour
 {
     public StatsCard Male;
     public StatsCard Female;
+    public GameObject WinLevelMessage;
+    public GameObject MissingParentMessage;
+    public GameObject IncompatibleMessage;
+    public GameObject FailMessage;
+    public TextMeshProUGUI FailText;
+    public EndGame EndGameScreen;
     
     public void Match()
     {
@@ -16,26 +23,48 @@ public class newMatch : MonoBehaviour
             {
                 BabyGiraffe Baby = new BabyGiraffe();
                 Baby.newBaby(Female.myGiraffe, Male.myGiraffe);
-                if (PlayerPrefs.GetInt("Generation") <= 10)
+                NextLevel(Baby);
+
+                if (PlayerPrefs.GetInt("AverageBeefiness") > 95)
                 {
-                    print("You found a match - Next Generation!");
-                    NextLevel(Baby);
-                    //respawn giraffes
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    FailText.text = "Your Giraffe grew too beefy!\n It has stomped on all the others, and there are no giraffes left!\nGame Over! :(";
+                    FailMessage.SetActive(true);
+                }
+                else if (PlayerPrefs.GetInt("AverageBeefiness") < 10)
+                {
+                    FailText.text = "Your Giraffe is so small, when it met a lion, it was swallowed whole!\n Game Over! :O";
+                    FailMessage.SetActive(true);
+                }
+                else if (PlayerPrefs.GetInt("AverageHotness") > 95)
+                {
+                    FailText.text = "Your Giraffe is so hot it got smothered to death by all it's suitors!\n Game Over! X(";
+                    FailMessage.SetActive(true);
+                }
+                else if (PlayerPrefs.GetInt("AverageIntelligence") > 95)
+                {
+                    FailText.text = "Your Giraffe's grew too brainly!\n They decide they are better off on their own and they leave Earth to its DOOM!\n Game Over! 8-X";
+                    FailMessage.SetActive(true);
                 }
                 else
                 {
-                    //Win or Lose Condition tested
+                    if (PlayerPrefs.GetInt("Generation") < 1)
+                    {
+                        WinLevelMessage.SetActive(true);
+                    }
+                    else
+                    {
+                        EndGame();
+                    }
                 }
             }
             else
             {
-                print("No Match!");
+                IncompatibleMessage.SetActive(true);
             }
         }
         else
         {
-            print("You must select a male and female giraffe");
+            MissingParentMessage.SetActive(true);
         }
     }
 
@@ -50,9 +79,6 @@ public class newMatch : MonoBehaviour
 
     public void NextLevel(BabyGiraffe Baby)
     {
-        int date = PlayerPrefs.GetInt("Date") + 10;
-        int generation = PlayerPrefs.GetInt("Generation") + 1;
-
         int[] offsets = new int[6];
 
         for (int i = 0; i < offsets.Length; i++)
@@ -60,8 +86,6 @@ public class newMatch : MonoBehaviour
             offsets[i] = Random.Range(-10, 10);
         }
 
-        PlayerPrefs.SetInt("Date", date);
-        PlayerPrefs.SetInt("Generation", generation);
         PlayerPrefs.SetInt("MalePopulation", 5);
         PlayerPrefs.SetInt("AverageBeefiness", Baby.Beefiness + offsets[0]);
         PlayerPrefs.SetInt("AverageSpeediness", Baby.Speediness + offsets[1]);
@@ -69,5 +93,30 @@ public class newMatch : MonoBehaviour
         PlayerPrefs.SetInt("AverageBrainliness", Baby.Brainliness + offsets[3]);
         PlayerPrefs.SetInt("AverageLongNeckness", Baby.LongNeckness + offsets[4]);
         PlayerPrefs.SetInt("AverageHotness", Baby.Hotness + offsets[5]);
+    }
+
+    void EndGame()
+    {
+        EndGameScreen.Canvas.SetActive(true);
+        if(PlayerPrefs.GetInt("AverageBrainliness") >= 85)
+        {
+            EndGameScreen.BrainlyWin.SetActive(true);
+        }
+        else if(PlayerPrefs.GetInt("AverageBeefiness") >= 85)
+        {
+            EndGameScreen.BeefyWin.SetActive(true);
+        }
+        else if (PlayerPrefs.GetInt("AverageHotness") >= 85)
+        {
+            EndGameScreen.HotWin.SetActive(true);
+        }
+        else if (PlayerPrefs.GetInt("AverageLongNeckness") >= 85)
+        {
+            EndGameScreen.LongNeckWin.SetActive(true);
+        }
+        else 
+        {
+            EndGameScreen.Lose.SetActive(true);
+        }
     }
 }
