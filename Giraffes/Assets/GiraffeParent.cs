@@ -62,6 +62,7 @@ public class GiraffeParent : MonoBehaviour
                     if(gp = hit.transform.GetComponent<GiraffeParent>())
                     {
                         PopulateStats(gp);
+                        FindObjectOfType<AudioManager>().Play("GiraffeSelect");
                     }
                 }
             }

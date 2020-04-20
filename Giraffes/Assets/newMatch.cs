@@ -29,21 +29,25 @@ public class newMatch : MonoBehaviour
                 {
                     FailText.text = "Your Giraffe grew too beefy!\n It has stomped on all the others, and there are no giraffes left!\nGame Over! :(";
                     FailMessage.SetActive(true);
+                    FindObjectOfType<AudioManager>().Play("Lose");
                 }
                 else if (PlayerPrefs.GetInt("AverageBeefiness") < 10)
                 {
                     FailText.text = "Your Giraffe is so small, when it met a lion, it was swallowed whole!\n Game Over! :O";
                     FailMessage.SetActive(true);
+                    FindObjectOfType<AudioManager>().Play("Lose");
                 }
                 else if (PlayerPrefs.GetInt("AverageHotness") > 95)
                 {
                     FailText.text = "Your Giraffe is so hot it got smothered to death by all it's suitors!\n Game Over! X(";
                     FailMessage.SetActive(true);
+                    FindObjectOfType<AudioManager>().Play("Lose");
                 }
                 else if (PlayerPrefs.GetInt("AverageIntelligence") > 95)
                 {
                     FailText.text = "Your Giraffe's grew too brainly!\n They decide they are better off on their own and they leave Earth to its DOOM!\n Game Over! 8-X";
                     FailMessage.SetActive(true);
+                    FindObjectOfType<AudioManager>().Play("Lose");
                 }
                 else
                 {
@@ -60,11 +64,13 @@ public class newMatch : MonoBehaviour
             else
             {
                 IncompatibleMessage.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("IncompatibleGiraffes");
             }
         }
         else
         {
             MissingParentMessage.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("IncompatibleGiraffes");
         }
     }
 
@@ -101,22 +107,27 @@ public class newMatch : MonoBehaviour
         if(PlayerPrefs.GetInt("AverageBrainliness") >= 85)
         {
             EndGameScreen.BrainlyWin.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Win");
         }
         else if(PlayerPrefs.GetInt("AverageBeefiness") >= 85)
         {
             EndGameScreen.BeefyWin.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Win");
         }
         else if (PlayerPrefs.GetInt("AverageHotness") >= 85)
         {
             EndGameScreen.HotWin.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Win");
         }
         else if (PlayerPrefs.GetInt("AverageLongNeckness") >= 85)
         {
             EndGameScreen.LongNeckWin.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Win");
         }
         else 
         {
             EndGameScreen.Lose.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Lose");
         }
     }
 }
