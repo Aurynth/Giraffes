@@ -31,6 +31,8 @@ public class GiraffeParent : MonoBehaviour
         Brainliness = PlayerPrefs.GetInt("AverageBrainliness") + offsets[3];
         LongNeckness = PlayerPrefs.GetInt("AverageLongNeckness") + offsets[4];
         Hotness = PlayerPrefs.GetInt("AverageHotness") + offsets[5];
+        float scale = (Chonk / 100f) * 30;
+        Giraffe.transform.localScale = new Vector3(scale, scale, scale);
 
         if(PlayerPrefs.GetInt("MalePopulation") > 0)
         {
