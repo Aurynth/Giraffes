@@ -51,7 +51,7 @@ public class newMatch : MonoBehaviour
                 }
                 else
                 {
-                    if (PlayerPrefs.GetInt("Generation") < 1)
+                    if (PlayerPrefs.GetInt("Generation") < 10)
                     {
                         WinLevelMessage.SetActive(true);
                     }
