@@ -7,6 +7,8 @@ public class GiraffeParent : MonoBehaviour
     public StatsCard FemaleCard;
     public StatsCard MaleCard;
     public GameObject Giraffe;
+    public GiraffeMotor Motor;
+    public GroundSensor Ground;
     public bool male;
     public int Beefiness;
     public int Speediness;
@@ -62,6 +64,7 @@ public class GiraffeParent : MonoBehaviour
                     if(gp = hit.transform.GetComponent<GiraffeParent>())
                     {
                         PopulateStats(gp);
+                        Ground.CurrentGiraffe = this;
                         FindObjectOfType<AudioManager>().Play("GiraffeSelect");
                     }
                 }

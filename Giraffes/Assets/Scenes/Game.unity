@@ -643,6 +643,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 58821632}
+  Motor: {fileID: 58821635}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -650,6 +652,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &58821635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 180174001}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58821632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &90934009 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4391467592415685020, guid: 3d213e32f224af84d88bbce51a881ac8,
@@ -677,6 +691,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 90934009}
+  Motor: {fileID: 90934012}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -684,6 +700,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &90934012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 588246809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90934009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101498765
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 101498766}
   - component: {fileID: 101498767}
+  - component: {fileID: 101498768}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -734,6 +763,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2c1cd56ba8fba418669daecef25fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &101498768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101498765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748e6196d070ef7409bd13c89e42d52b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: b3b0f6d136b3fd240a02477091d8699a, type: 2}
+  soundsMixer: {fileID: 24100000, guid: f8e4f1bdb5c76ba4f8209a01f17a4162, type: 2}
 --- !u!1 &115891716
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +1005,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &147024593
@@ -1174,6 +1222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &187829209
@@ -1542,6 +1595,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 225032007}
+  Motor: {fileID: 225032010}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -1549,6 +1604,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &225032010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2144699501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225032007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &235728879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1631,6 +1698,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &252685517 stripped
@@ -1660,6 +1732,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 252685517}
+  Motor: {fileID: 252685520}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -1667,6 +1741,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &252685520 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1826055008}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252685517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &261704216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,7 +2084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -44, y: -43}
+  m_AnchoredPosition: {x: -44, y: 3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &299736970
@@ -2854,8 +2940,9 @@ GameObject:
   - component: {fileID: 362344512}
   - component: {fileID: 362344511}
   - component: {fileID: 362344515}
+  - component: {fileID: 362344516}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2946,7 +3033,8 @@ AudioSource:
   m_GameObject: {fileID: 362344510}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b3b0f6d136b3fd240a02477091d8699a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: cb6c27c86374863458ed2543cf627e63, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3033,6 +3121,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &362344516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362344510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538a4eedc3a702b459e0c36c2fb28f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentGiraffe: {fileID: 0}
 --- !u!1 &372976777
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,13 +4423,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 115891717}
   m_HandleRect: {fileID: 1694187679}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 101498768}
+        m_MethodName: SetSoundVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &542632342
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,6 +4617,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stat: {fileID: 555008255}
+--- !u!1 &565164919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565164920}
+  m_Layer: 0
+  m_Name: Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565164920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565164919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 214, y: -2, z: 261}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &588246809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4587,6 +4729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &600589320
@@ -5670,6 +5817,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &852151174
@@ -6041,6 +6193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &910398516 stripped
@@ -6070,6 +6227,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 910398516}
+  Motor: {fileID: 910398519}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -6077,6 +6236,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &910398519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 942682805}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910398516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916613995
 GameObject:
   m_ObjectHideFlags: 0
@@ -6345,6 +6516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &947712706
@@ -6727,6 +6903,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 989969831}
+  Motor: {fileID: 989969834}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -6734,6 +6912,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &989969834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 135311792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989969831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1004454749
 GameObject:
   m_ObjectHideFlags: 0
@@ -7247,6 +7437,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 1138176236}
+  Motor: {fileID: 1138176239}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -7254,6 +7446,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &1138176239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 906467151}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138176236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1159353924
 GameObject:
   m_ObjectHideFlags: 0
@@ -7737,13 +7941,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 655829341}
   m_HandleRect: {fileID: 951483030}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 101498768}
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1283393820
 GameObject:
   m_ObjectHideFlags: 0
@@ -9668,6 +9883,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
+    - target: {fileID: 5751182023521530015, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: m_AutoRepath
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!4 &1556394919 stripped
@@ -9697,6 +9922,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 1556394920}
+  Motor: {fileID: 1556394922}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -9704,6 +9931,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &1556394922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1556394918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556394920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1581182875
 GameObject:
   m_ObjectHideFlags: 0
@@ -11454,6 +11693,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 1757853352}
+  Motor: {fileID: 1757853355}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -11461,6 +11702,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &1757853355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 235728879}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757853352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1761057890
 GameObject:
   m_ObjectHideFlags: 0
@@ -11936,6 +12189,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &1827750853
@@ -12051,10 +12309,10 @@ RectTransform:
   m_Father: {fileID: 101498766}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000034561162, y: 0}
-  m_SizeDelta: {x: 110.934555, y: 41.660583}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0.000034561162, y: 42}
+  m_SizeDelta: {x: 145.63795, y: 41.660583}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1837408611
 MonoBehaviour:
@@ -14716,6 +14974,8 @@ MonoBehaviour:
   FemaleCard: {fileID: 1859009759}
   MaleCard: {fileID: 1255874441}
   Giraffe: {fileID: 2091717684}
+  Motor: {fileID: 2091717687}
+  Ground: {fileID: 362344516}
   male: 0
   Beefiness: 0
   Speediness: 0
@@ -14723,6 +14983,18 @@ MonoBehaviour:
   Brainliness: 0
   LongNeckness: 0
   Hotness: 0
+--- !u!114 &2091717687 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751182023521530012, guid: 3d213e32f224af84d88bbce51a881ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 847263965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091717684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd210b5c11cd035448adf262262871ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2144699501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14805,6 +15077,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5751182023521530009, guid: 3d213e32f224af84d88bbce51a881ac8,
+        type: 3}
+      propertyPath: Transform
+      value: 
+      objectReference: {fileID: 565164920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d213e32f224af84d88bbce51a881ac8, type: 3}
 --- !u!1 &2146860729

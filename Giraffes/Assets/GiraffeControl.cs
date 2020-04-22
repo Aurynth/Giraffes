@@ -21,7 +21,7 @@ public class GiraffeControl : MonoBehaviour
     private float MinWanderTime;
     private float MaxWanderTime;
 
-    private Transform Transform;
+    public Transform Transform;
     private NavMeshAgent agent;
     private float timer;
 
@@ -39,7 +39,7 @@ public class GiraffeControl : MonoBehaviour
 
         MinWanderTime = 4;
         MaxWanderTime = 16;
-        wanderRadius = 50;
+        wanderRadius = 500;
 
         agent.speed = agent.speed * transform.localScale.y;
     }

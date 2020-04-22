@@ -19,7 +19,7 @@ public class newMatch : MonoBehaviour
     {
         if (Male.myGiraffe != null && Female.myGiraffe != null)
         {
-            if (GetCompatibility() > 95)
+            if (GetCompatibility() > 90)
             {
                 BabyGiraffe Baby = new BabyGiraffe();
                 Baby.newBaby(Female.myGiraffe, Male.myGiraffe);
